@@ -229,8 +229,8 @@ select{
 /*startBtn stopBtn  */
 .controlBtn {
     background: transparent;
-    color: #ffe600;
-    border: 3px #ffe600 solid;
+    color: blue;
+    border: 3px #646464 solid;
     padding: 10px 20px;
     font-size: 20px;
     border-radius: 2px;
