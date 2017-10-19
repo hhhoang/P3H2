@@ -50,13 +50,13 @@
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
-                <a class="navbar-brand" href="#">Logo</a>
+                <a class="navbar-brand" href="{% url 'index' %}">Logo</a>
             </div>
             <div class="collapse navbar-collapse" id="myNavbar">
                 <ul class="nav navbar-nav navbar-right">
-                    <li><a href="#">PORTFOLIO</a></li>
+                    <li><a href="{% url 'portfolio' %}">PORTFOLIO</a></li>
                     <li><a href="#">MERCHANDISE</a></li>
-                    <li><a href="#">CONTACT</a></li>
+                    <li><a href="{% url 'contact' %}">CONTACT</a></li>
                  </ul>
             </div>
       </div>
@@ -65,8 +65,7 @@
     {% block content %} There is no content to Show {% endblock %}
 
     <!-- Footer -->
-    <footer class="container bg-4 text-center">
-        <p></p>
+    <footer class="container text-center">
         <p>&copy; {{ year|default:"2017" }} -  Posie on Photos</p>
     </footer>
 

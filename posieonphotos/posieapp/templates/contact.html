@@ -1,0 +1,55 @@
+{% extends "layout.html" %}
+{% load static %}
+
+{% block content %}
+
+<div class="container" style="background-color:white;">
+    <div class="row" style="text-align: center">
+        <div class="col-sm-6 col-md-6 col-lg-6 getintouch">
+            <h2>Get in touch</h2>
+            <p>Hey there! <br>
+                So, here you can contact me <br>
+                for purchasing stuff you like, <br>
+                or just drop me a line, <br>
+                we surely can catch up <br>
+                for a cup of coffee <br>
+                and  discuss more <br>
+                about words and colours.<br>
+                Happy to hear from you!!!
+            </p>
+        </div>
+<!--        <div class="col-sm-6 col-md-6 col-lg-6" style="margin-top:20px;">
+            <form method="post" action="mailto:hanh00hoang@gmail.com" enctype="text/plain">
+                <div class="field half first">
+                    <label for="name">Name</label>
+                    <input type="text" name="name" id="name" value="" />
+                </div>
+                <div class="field half">
+                    <label for="email">Email</label>
+                    <input type="email" name="email" id="email" value="" />
+                </div>
+                <div class="field">
+                    <label for="message">Message</label>
+                    <textarea name="message" id="message" rows="10"></textarea>
+                </div>
+                <div class="actions">
+                    <input type="submit" class="button" name="submit" id="submit" value="Send Message" />
+                </div>
+            </form>
+        </div>-->
+        <div class="col-sm-6 col-md-6 col-lg-6">
+            <h2>Contact</h2>
+            <form role="form" action="" method="post">
+                {% csrf_token %}
+                {{ form.as_p }}
+                <button class="button" type="submit">Send message</button>
+</form>
+        </div>
+    </div>
+</div>
+
+{% endblock %}
+
+{% block scripts %}
+
+{% endblock %}

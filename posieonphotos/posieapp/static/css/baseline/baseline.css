@@ -1,58 +1,46 @@
 ﻿/****** RTF Baseline CSS **********/
- * {
-
-     font-family: 'Noto Sans', sans-serif;
-
-} 
 
 html{
+	font-family: "Montserrat", sans-serif;
 	font-size: 100%;
 	height:100%;
 }
+
 body{
 	width:100%;
 	height:100%;
 	margin:0 auto;
 	padding:0;
-	background: #f4f4f4;
+	background: #f8f8f8;
 }
 
 h1, h2, h3, h4, h5, h6 {
     color: #555;
     font-family: "Montserrat", sans-serif;
-    font-weight: 700;
+    font-weight: 300;
     line-height: 1.5;
     margin: 0 0 1em 0;
+    padding-top: 15px;
+    padding-bottom: 15px;
     text-transform: uppercase;
     letter-spacing: 0.25em;
 }
 
-/* Social media icons */
-
-ul {
-    overflow: auto;
+p{
+    color: #555;
+    font-family: "Montserrat", sans-serif;
+    font-weight: 200;
 }
 
-ul li {
-    list-style-type: none;
-    float: left;
+.book{
+    margin-right: 100px;
+    margin-left: 200px;
+    border: 1px solid black;
+    background-color: lightblue;
 }
 
-ul li a i {
-    background: #205D7A;
-    color: #fff;
-    width: 40px;
-    height: 40px;
-    border-radius: 20px;
-    font-size: 25px;
-    text-align: center;
-    margin-right: 10px;
-    padding-top: 15%;
-    transition: all 0.2s ease-in-out;
-}
-
-ul li a i:hover {
-    opacity: .7;
+.getintouch{
+    background-image: url("static/images/pic02.jpg");;
 }
 
 // Basic Button Style
@@ -60,94 +48,184 @@ ul li a i:hover {
   box-sizing: border-box;
   appearance: none;
   background-color: transparent;
-  border: 2px solid $red;
-  border-radius: 0.6em;
-  color: $red;
+  border: 2px solid;
+  border: 0;
+  border-radius: 8px;
+  box-shadow: inset 0 0 0 1px #cccccc;
+  color: #555 !important;
   cursor: pointer;
-  display: flex;
+  display: inline-block;
   align-self: center;
-  font-size: 1rem;
-  font-weight: 400;
-  line-height: 1;
+  font-size: 0.8em;
+  font-weight: 500;
+  height: 3.5em;
+  letter-spacing: 0.25em;
+  line-height: 3.5em;
   margin: 20px;
-  padding: 1.2em 2.8em;
+  padding: 0 2em;
+  position: relative;
   text-decoration: none;
   text-align: center;
   text-transform: uppercase;
   font-family: 'Montserrat', sans-serif;
-  font-weight: 700;
-
-  &:hover,
-  &:focus {
-    color: #fff;
-    outline: 0;
-  }
+  white-space: nowrap;
 }
 
-
-/* Explore Button  */
-.exploreButton {
-  border-color: #3498db;
-  color: #fff;
-  box-shadow: 0 0 40px 40px #3498db inset, 0 0 0 0 #3498db;
-  transition: all 150ms ease-in-out;
-
-  &:hover {
-    box-shadow: 0 0 10px 0 #3498db inset, 0 0 10px 4px #3498db;
-  }
+.button {
+		-moz-appearance: none;
+		-webkit-appearance: none;
+		-ms-appearance: none;
+		appearance: none;
+		-moz-transition: background-color 0.2s ease-in-out, box-shadow 0.2s ease-in-out, color 0.2s ease-in-out;
+		-webkit-transition: background-color 0.2s ease-in-out, box-shadow 0.2s ease-in-out, color 0.2s ease-in-out;
+		-ms-transition: background-color 0.2s ease-in-out, box-shadow 0.2s ease-in-out, color 0.2s ease-in-out;
+		transition: background-color 0.2s ease-in-out, box-shadow 0.2s ease-in-out, color 0.2s ease-in-out;
+		border: 0;
+		cursor: pointer;
+		display: inline-block;
+		font-weight: 400;
+		letter-spacing: 5px;
+		text-align: center;
+		text-decoration: none;
+		text-transform: uppercase;
+		font-family: 'Montserrat', sans-serif;
+		color: #555;
+		white-space: nowrap;
+		font-size: 0.75rem;
+		max-width: 20rem;
+		height: 3.75em;
+		line-height: 3.75em;
+		border-radius: 3.75em;
+		padding: 0 2.5em;
+		text-overflow: ellipsis;
+		overflow: hidden;
 }
 
-/*
-a:link, a:hover, a:visited, a:active{
-	color:#336699;
-	text-decoration:none;
+.button:hover{
+    color: #1abc9c !important;
 }
 
-a:hover{
-    text-decoration: underline;
+#container>img{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+}
+/* Sliding Buttons*/
+
+.slideBtn{
+    position: absolute;
+    width: 50px;
+    height: 50px;
+    border: none;
+    border-radius: 25px;
+    top: -300px;
+    background: #555;
+    color: white;
+    font-size: 20px;
 }
 
-
-button, a{
-	border:none;
-	outline: none;
+#btn1{
+    position: relative;
+    float: left;
 }
 
-*:focus,button:focus, *[role="button"]:focus,*[role="link"]:focus{
-	 outline:thin dotted; 
+#btn2{
+    position: relative;
+    float: right;
 }
 
-a:not(.btn):hover, *[role="button"], *[role="link"] {
-    text-decoration:underline; 
+/* Social media icons */
+ul {
+	list-style: disc;
+	margin: 0 0 2rem 0;
+	padding-left: 1rem;
 }
 
-
-h1, h2{
-	color: #000;
+ul li {
+	padding-left: 0.5rem;
 }
 
-h1, h2, h3, h4, h5, h6{
-	margin:0;
-	padding:0;
+ul.icons {
+	cursor: default;
+	list-style: none;
+	padding-left: 0;
 }
 
-:not(pre) > span{
-	display:inline-block;
+ul.icons li {
+	display: inline-block;
+	padding: 0 0.75rem 0 0;
 }
 
-ul{
-  -webkit-padding-start: 0;
+ul.icons li:last-child {
+	padding-right: 0;
 }
 
-ul li{
-  list-style: none;
-  margin: 0;
-  padding:0;
+/* Icon */
+.icon {
+	text-decoration: none;
+	border-bottom: none;
+	position: relative;
+	text-align: center;
+	color: #555;
 }
-/*
- * Custom modifications to the EY online style guide
-*/
 
+a {
+    color: #555;
+}
+
+    .icon:before {
+		-moz-osx-font-smoothing: grayscale;
+			-webkit-font-smoothing: antialiased;
+			font-family: FontAwesome;
+			font-style: normal;
+			font-weight: normal;
+			text-transform: none !important;
+		}
+
+		.icon > .label {
+			display: none;
+		}
+
+		.icon.style2:before {
+			border-radius: 2.75em;
+			display: inline-block;
+			height: 2.75em;
+			line-height: 2.75em;
+			width: 2.75em;
+		}
+
+		.icon.major {
+			display: block;
+			margin: 0 0 1rem 0;
+		}
+
+			.icon.major:before {
+				font-size: 1.25rem;
+			}
+
+	a.icon.style2:before {
+		-moz-transition: background-color 0.2s ease-in-out, box-shadow 0.2s ease-in-out, color 0.2s ease-in-out;
+		-webkit-transition: background-color 0.2s ease-in-out, box-shadow 0.2s ease-in-out, color 0.2s ease-in-out;
+		-ms-transition: background-color 0.2s ease-in-out, box-shadow 0.2s ease-in-out, color 0.2s ease-in-out;
+		transition: background-color 0.2s ease-in-out, box-shadow 0.2s ease-in-out, color 0.2s ease-in-out;
+	}
+
+	.icon.style2:before {
+		box-shadow: inset 0 0 0 1px #555;
+	}
+
+	a.icon.style2:hover:before {
+		box-shadow: inset 0 0 0 1px #1abc9c;
+		color: #1abc9c !important;
+	}
+
+	a.icon.style2:active:before {
+		background-color: rgba(71, 211, 229, 0.1);
+		box-shadow: inset 0 0 0 1px #1abc9c;
+		color: #555 !important;
+	}
+
+/* Footer */
 footer {
     padding-top: 15px;
     padding-bottom: 15px;
@@ -156,9 +234,13 @@ footer {
     margin-bottom: 0;
     font-size: 12px;
     letter-spacing: 5px;
+    background-color: #333;
 }
 
+/* Navbar */
+
 .navbar {
+    overflow: hidden;
     padding-top: 15px;
     padding-bottom: 15px;
     border: 0;
@@ -166,13 +248,83 @@ footer {
     margin-bottom: 0;
     font-size: 12px;
     letter-spacing: 5px;
+    position: fixed; /* Set the navbar to fixed position */
+    top: 0; /* Position the navbar at the top of the page */
+    width: 100%; /* Full width */
+
 }
 
+
+.main {
+    margin-top: 30px; /* Add a top margin to avoid content overlay */
+}
+/* Links - change color on hover */
 .navbar-nav li a:hover {
     color: #1abc9c !important;
 }
 
-.bg-4 {
-    background-color: #2f2f2f;
-    color: #ffffff;
-}
+/* Form */
+
+	form {
+		margin: 0 0 2rem 0;
+	}
+
+		form .field {
+			margin: 0 0 1.5rem 0;
+			clear: both;
+		}
+
+			form .field.half {
+				clear: none;
+				width: 50%;
+				float: left;
+				padding: 0 0 0 0.75rem;
+			}
+
+				form .field.half.first {
+					padding: 0 0.75rem 0 0;
+				}
+
+			form .field.third {
+				clear: none;
+				width: 33.33333%;
+				float: left;
+				padding: 0 0 0 0.75rem;
+			}
+
+				form .field.third.first {
+					padding: 0 0.75rem 0 0;
+				}
+
+		form > .actions {
+			clear: both;
+			margin: 1.875rem 0 0 0 !important;
+		}
+
+	label {
+		display: block;
+		font-size: 0.9rem;
+		font-weight: 400;
+		margin: 0 0 1rem 0;
+	}
+
+	input[type=text], input[type=email]{
+	    border: solid 1px;
+	    color: blue;
+	}
+	textarea {
+		-moz-appearance: none;
+		-webkit-appearance: none;
+		-ms-appearance: none;
+		appearance: none;
+		background-color: transparent;
+		border-radius: 4px;
+		border: none;
+		border: solid 1px;
+		color: inherit;
+		display: block;
+		outline: 0;
+		padding: 0 0.825rem;
+		text-decoration: none;
+		width: 100%;
+	}

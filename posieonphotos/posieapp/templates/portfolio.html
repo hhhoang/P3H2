@@ -1,0 +1,160 @@
+{% extends "layout.html" %}
+{% load static %}
+
+{% block content %}
+
+<div class="main container" style="background-color:white; ">
+    <div class="row">
+        <!--Image-->
+        <div class="col-sm-6 col-md-6 col-lg-6" style="padding: 0 0 0 0; margin: 0 auto; position: relative">
+            <img class="slides" src="/static/images/1.jpg" style="width:100%" alt="1">
+            <img class="slides" src="/static/images/2.jpg" style="width:100%" alt="1">
+            <img class="slides" src="/static/images/3.jpg" style="width:100%" alt="1">
+            <img class="slides" src="/static/images/4.jpg" style="width:100%" alt="1">
+            <img class="slides" src="/static/images/5.jpg" style="width:100%" alt="1">
+            <img class="slides" src="/static/images/6.jpg" style="width:100%" alt="1">
+        </div>
+        <!--Content-->
+        <div class="col-sm-6 col-md-6 col-lg-6" style="padding: 0 0 0 0; margin: 0 auto; position: relative">
+            <div class="poems" style="text-align: center">
+                <h1>LIVE</h1>
+                <p>Do not wait <br>
+                    for tomorrow<br>
+                    or summer.<br>
+                    Take your day, <br>
+                    and do something!<br>
+                    You are young, <br>
+                    and brave.<br>
+                    Coffee will not get warmer.<br>
+                    Adventure will not wait.<br>
+                    Because:<br>
+                    tomorrow<br> is <br> a myth.<br>
+                Live <br> today! <br>
+                </p>
+            </div>
+
+            <div class="poems" style="text-align: center">
+                <h1>FREE FALL</h1>
+                <p>Red, yellow, green,<br>
+                    then grey, brown<br>
+                    then repeat.<br>
+                    until you are tired of gazing at<br>
+                    leaves changing colours and<br>
+                    losing their lives falling into<br>
+                    the ground gracefully.<br>
+                </p>
+                <p>Blue is the sky and golden is the sun<br>
+                    Life stretches <br>
+                    at the end of the thought.<br>
+                    Free fall.<br>
+                    Or fall free.<br>
+                    You decide.<br>
+                </p>
+            </div>
+
+            <div class="poems" style="text-align: center">
+                <h1>FLAME</h1>
+                <p>
+                    At the end of the horizon<br>
+                    where the sky meets the earth,<br>
+                    it sparkles flames<br>
+                    of lust, of passion, of sweetness,<br>
+                    of harmony, of dreams,<br>
+                    of things that aren't real...<br>
+                </p>
+                <p>
+                    I stand still, simply just embracing<br>
+                    the falling of the sky,<br>
+                    collapsing and melting<br>
+                    into the darkness of the night,<br>
+                    of magic, of shining starts,<br>
+                    connecting souls in the vast<br>
+                    and mesmerising galaxy.<br>
+                </p>
+            </div>
+
+            <div class="poems" style="text-align: center">
+                <h1>SENSATION</h1>
+                <p>Let us forget about<br>
+                    what happened yesterday and<br>
+                    what will happen tomorrow.<br>
+                    Let us savour this moment,<br>
+                    when you and I<br>
+                    and our universes collide.<br>
+                    Darling, you are so dear<br>
+                    to my heart<br>
+                    the way the clouds to the sky<br>
+                </p>
+            </div>
+
+            <div class="poems" style="text-align: center">
+                <h1>DIMENSIONS</h1>
+                <p>She rambles into<br>
+                    the tender of the night,<br>
+                    walking home with a head<br>
+                    full of joy<br>
+                    yet a heart<br>
+                    filled with loneliness.
+                </p>
+                <p>
+                    There is an invisible spline<br>
+                    that connects her soul,<br>
+                    the starts and the<br>
+                    pure<br>
+                    midnight<br>
+                    silence.<br>
+                </p>
+                <p>
+                    She has a faint hope, that<br>
+                    this moment will last,<br>
+                    eternally...
+                </p>
+            </div>
+
+            <div class="poems" style="text-align: center">
+                <h1>DIMENSION</h1>
+                <p>You are my unspoken dream<br>
+                holding an open window.
+                </p>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!--Buttons-->
+<div>
+    <button class="slideBtn" onclick="plusIndex(-1)" id="btn1">&#10094;</button>
+    <button class="slideBtn" onclick="plusIndex(1)" id="btn2">&#10095;</button>
+</div>
+
+{% endblock %}
+
+{% block scripts %}
+
+<script>
+    var index = 1;
+
+    function plusIndex(n){
+        index = index + n;
+        showImage(index);
+    }
+
+    showImage(1);
+
+    function showImage(n){
+        var i;
+        var x = document.getElementsByClassName("slides");
+        var y = document.getElementsByClassName("poems");
+
+        if(n > x.length){index = 1};
+        if(n < 1){index = x.length};
+        for(i = 0; i < x.length; i++)
+            {
+                x[i].style.display = "none";
+                y[i].style.display = "none";
+            }
+        x[index-1].style.display = "block";
+        y[index-1].style.display = "block";
+    }
+</script>
+{% endblock %}
