@@ -40,9 +40,8 @@
 </head>
 
 <body>
-
     <!-- Navbar -->
-    <nav class="navbar navbar-default">
+    <nav class="navbar navbar-default navbar-fixed-top">
         <div class="container">
             <div class="navbar-header">
                 <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
@@ -55,7 +54,7 @@
             <div class="collapse navbar-collapse" id="myNavbar">
                 <ul class="nav navbar-nav navbar-right">
                     <li><a href="{% url 'portfolio' %}">PORTFOLIO</a></li>
-                    <li><a href="#">MERCHANDISE</a></li>
+                    <li><a href="{% url 'merchandise' %}">MERCHANDISE</a></li>
                     <li><a href="{% url 'contact' %}">CONTACT</a></li>
                  </ul>
             </div>
@@ -65,8 +64,8 @@
     {% block content %} There is no content to Show {% endblock %}
 
     <!-- Footer -->
-    <footer class="container text-center">
-        <p>&copy; {{ year|default:"2017" }} -  Posie on Photos</p>
+    <footer class="container text-center nav">
+        <p>&copy; {{ year|default:"2017" }} - Posie on Photos</p>
     </footer>
 
 </div>

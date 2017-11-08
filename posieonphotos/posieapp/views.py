@@ -1,12 +1,10 @@
 from django.http import HttpResponse
-from django.shortcuts import render
-from .forms import ContactForm
+from django.shortcuts import render, redirect
+
 
 # Contact form
-from django.core.mail import EmailMessage
-from django.shortcuts import redirect
-from django.template import Context
-from django.template.loader import get_template
+from .forms import ContactForm
+from django.core.mail import EmailMessage, send_mail, BadHeaderError
 
 def index(request):
     return render(request, 'index.html')
@@ -14,6 +12,9 @@ def index(request):
 
 def portfolio(request):
     return render(request, 'portfolio.html')
+
+def merchandise(request):
+    return render(request, 'merchandise.html')
 
 
 def contact(request):
@@ -28,23 +29,14 @@ def contact(request):
             contact_email = request.POST.get('contact_email', '')
             form_content = request.POST.get('content', '')
 
-            # Email the profile with the
-            # contact information
-            template = get_template('contact_template.txt')
-            context = Context({
-            'contact_name': contact_name,
-            'contact_email': contact_email,
-            'form_content': form_content,
-        })
-        content = template.render(context)
+            try:
+                send_mail(contact_name, contact_email, form_content, ['hanh00hoang@gmail.com'])
+            except BadHeaderError:
+                return HttpResponse('Invalid header found.')
+            return redirect('success')
 
-        email = EmailMessage("New contact form submission", content, \
-            "Your website" + '', ['youremail@gmail.com'], \
-            headers={'Reply-To': contact_email}
-        )
-        email.send()
-        return redirect('contact')
+    return render(request, 'contact.html', {'form': form_class})
 
-    return render(request, 'contact.html', {
-    'form': form_class,
-})
+def success(request):
+    #return HttpResponse('Success! Thank you for your message.')
+    return render(request, 'success.html')
