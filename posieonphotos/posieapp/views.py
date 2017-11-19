@@ -30,7 +30,7 @@ def contact(request):
             form_content = request.POST.get('content', '')
 
             try:
-                send_mail(contact_name, contact_email, form_content, ['hanh00hoang@gmail.com'])
+                send_mail(contact_name, form_content, contact_email, ['hanh00hoang@gmail.com'])
             except BadHeaderError:
                 return HttpResponse('Invalid header found.')
             return redirect('success')

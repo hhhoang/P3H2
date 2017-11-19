@@ -14,7 +14,7 @@ import os
 
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
-print(BASE_DIR)
+print("basedir: ", BASE_DIR)
 
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/1.11/howto/deployment/checklist/
@@ -25,7 +25,7 @@ SECRET_KEY = '=czb6$tirrukc%$0nndm7yxryhgouce=56rm+@f*-un0zm0kli'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['localhost', '127.0.0.1']
+ALLOWED_HOSTS = ['localhost', '127.0.0.1', 'poetry-hanhhoang.appspot.com']
 
 
 # Application definition
@@ -119,17 +119,19 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/1.11/howto/static-files/
 
 STATIC_URL = '/static/'
-
-STATICFILES_DIRS = (os.path.join(BASE_DIR, 'mysite',  'static'),)
-
+#STATICFILES_DIRS = os.path.join(BASE_DIR,'posieapp/static/')
+#print("staticfiles_dir: ", STATICFILES_DIRS)
 
 # for production
-FILES_ROOT = os.path.dirname(BASE_DIR)
-STATIC_ROOT = os.path.join(FILES_ROOT, 'static/')
-
+#FILES_ROOT = os.path.dirname(BASE_DIR)
+#STATIC_ROOT = os.path.join(FILES_ROOT, 'posieonphotos', 'static/')
+STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
+print("static_root: ", STATIC_ROOT)
 
 # Contact Form
+
 EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
+#EMAIL_BACKEND = 'djangoappengine.mail.EmailBackend'
 DEFAULT_FROM_EMAIL = 'testing@example.com'
 EMAIL_HOST_USER = 'hanh00hoang@gmail.com'
 EMAIL_HOST_PASSWORD = ''

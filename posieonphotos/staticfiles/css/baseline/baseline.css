@@ -1,0 +1,295 @@
+﻿/****** RTF Baseline CSS **********/
+
+html{
+	font-family: "Montserrat", sans-serif;
+	font-size: 100%;
+	height:100%;
+}
+
+body{
+	width:100%;
+	height:100%;
+	margin:0 auto;
+	padding:60px;
+	background: #f8f8f8;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    color: #555;
+    font-family: "Montserrat", sans-serif;
+    font-weight: 300;
+    line-height: 1.5;
+    margin: 0 0 1em 0;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    text-transform: uppercase;
+    letter-spacing: 0.25em;
+}
+
+p{
+    color: #555;
+    font-family: "Montserrat", sans-serif;
+    font-weight: 200;
+}
+
+.book{
+    margin-right: 100px;
+    margin-left: 200px;
+    border: 1px solid black;
+    background-color: lightblue;
+}
+
+
+// Basic Button Style
+/*.button {
+    background-color: white;
+    border: 2px solid #1abc9c; *//* Light Blue *//*
+    color: black;
+    padding: 16px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    -webkit-transition-duration: 0.4s; *//* Safari *//*
+    transition-duration: 0.4s;
+    cursor: pointer;
+    border-radius: 50px;
+}*/
+
+
+input[type="submit"],
+.roundBtn {
+		-moz-appearance: none;
+		-webkit-appearance: none;
+		-ms-appearance: none;
+		appearance: none;
+		-moz-transition: background-color 0.2s ease-in-out, box-shadow 0.2s ease-in-out, color 0.2s ease-in-out;
+		-webkit-transition: background-color 0.2s ease-in-out, box-shadow 0.2s ease-in-out, color 0.2s ease-in-out;
+		-ms-transition: background-color 0.2s ease-in-out, box-shadow 0.2s ease-in-out, color 0.2s ease-in-out;
+		transition: background-color 0.2s ease-in-out, box-shadow 0.2s ease-in-out, color 0.2s ease-in-out;
+		border: 0;
+		border-radius: 3.75em !important;
+		-webkit-border-radius: 7px;
+        -moz-border-radius: 7px;
+		cursor: pointer;
+		display: inline-block;
+		font-weight: 400;
+		letter-spacing: 0.125em;
+		text-align: center;
+		text-decoration: none;
+		text-transform: uppercase;
+		white-space: nowrap;
+		font-size: 0.75rem;
+		max-width: 20rem;
+		height: 3.75em;
+		line-height: 7px;
+		//padding: 0 2.5em;
+		text-overflow: ellipsis;
+		overflow: hidden;
+		background-color: transparent;
+		box-shadow: inset 0 0 0 1px rgba(0, 0, 0, 0.2);
+		color: #000000 !important;
+		perspective: 1px;
+}
+
+
+input[type="submit"]:hover,
+.roundBtn:hover{
+    box-shadow: inset 0 0 0 1px #1abc9c;
+	color: #1abc9c !important;
+}
+
+input[type="submit"]:active,
+.roundBtn:active{
+	background-color: rgba(71, 211, 229, 0.2);
+	box-shadow: inset 0 0 0 1px #1abc9c;
+	color: #1abc9c !important;
+}
+
+
+#container>img{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+}
+/* Sliding Buttons*/
+
+.slideBtn{
+    position: absolute;
+    width: 50px;
+    height: 50px;
+    border: none;
+    border-radius: 25px;
+    top: -400px;
+    background: #555;
+    color: white;
+    font-size: 20px;
+}
+
+#btn1{
+    position: relative;
+    float: left;
+}
+
+#btn2{
+    position: relative;
+    float: right;
+}
+
+/* Social media icons */
+ul {
+	list-style: disc;
+	margin: 0 0 2rem 0;
+	padding-left: 1rem;
+}
+
+ul li {
+	padding-left: 0.5rem;
+}
+
+ul.icons {
+	cursor: default;
+	list-style: none;
+	padding-left: 0;
+}
+
+ul.icons li {
+	display: inline-block;
+	padding: 0 0.75rem 0 0;
+}
+
+ul.icons li:last-child {
+	padding-right: 0;
+}
+
+/* Icon */
+.icon {
+	text-decoration: none;
+	border-bottom: none;
+	position: relative;
+	text-align: center;
+	color: #555;
+	padding-bottom: 15px;
+}
+
+a {
+    color: #555;
+}
+
+    .icon:before {
+		-moz-osx-font-smoothing: grayscale;
+			-webkit-font-smoothing: antialiased;
+			font-family: FontAwesome;
+			font-style: normal;
+			font-weight: normal;
+			text-transform: none !important;
+		}
+
+		.icon > .label {
+			display: none;
+		}
+
+		.icon.style2:before {
+			border-radius: 2.75em;
+			display: inline-block;
+			height: 2.75em;
+			line-height: 2.75em;
+			width: 2.75em;
+		}
+
+		.icon.major {
+			display: block;
+			margin: 0 0 1rem 0;
+		}
+
+			.icon.major:before {
+				font-size: 1.25rem;
+			}
+
+	a.icon.style2:before {
+		-moz-transition: background-color 0.2s ease-in-out, box-shadow 0.2s ease-in-out, color 0.2s ease-in-out;
+		-webkit-transition: background-color 0.2s ease-in-out, box-shadow 0.2s ease-in-out, color 0.2s ease-in-out;
+		-ms-transition: background-color 0.2s ease-in-out, box-shadow 0.2s ease-in-out, color 0.2s ease-in-out;
+		transition: background-color 0.2s ease-in-out, box-shadow 0.2s ease-in-out, color 0.2s ease-in-out;
+	}
+
+	.icon.style2:before {
+		box-shadow: inset 0 0 0 1px #555;
+	}
+
+	a.icon.style2:hover:before {
+		box-shadow: inset 0 0 0 1px #1abc9c;
+		color: #1abc9c !important;
+	}
+
+	a.icon.style2:active:before {
+		background-color: rgba(71, 211, 229, 0.1);
+		box-shadow: inset 0 0 0 1px #1abc9c;
+		color: #555 !important;
+	}
+
+/* Footer */
+footer {
+    padding-top: 15px;
+    padding-bottom: 15px;
+    border: 0;
+    border-radius: 0;
+    margin-bottom: 0;
+    font-size: 12px;
+    letter-spacing: 5px;
+}
+
+/* Navbar */
+.navbar {
+    overflow: hidden;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    border: 0;
+    border-radius: 0;
+    margin-bottom: 0;
+    font-size: 12px;
+    letter-spacing: 5px;
+    position: fixed; /* Set the navbar to fixed position */
+    top: 0; /* Position the navbar at the top of the page */
+    width: 100%; /* Full width */
+
+}
+
+.main {
+    margin-top: 30px; /* Add a top margin to avoid content overlay */
+}
+
+/* Links - change color on hover */
+.navbar-nav li a:hover {
+    color: #1abc9c !important;
+}
+
+/* Form */
+
+form {
+    max-width: 450px;
+    margin: 0 auto 50px
+}
+
+    label {
+        display: block;
+        margin-bottom: 20px
+    }
+
+    input, textarea {
+        border: 1px solid #555;
+        box-sizing: border-box;
+        padding: 10px
+    }
+
+        &: focus {
+            outline: none;
+            border-color: #1abc9c;
+        }
+
+        textarea {
+            height: 10em;
+        }
+
+

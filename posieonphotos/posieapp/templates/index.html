@@ -5,9 +5,10 @@
 
 <div class="main container" style="background-color: white;">
         <div class="row">
-            <!--Image-->
+            <!--Image src="/static/images/index.jpg" -->
             <div class="col-sm-6 col-md-6 col-lg-6" style="padding: 0 0 0 0;">
-                <img src="/static/images/index.jpg" class="img-responsive margin" style="width:100%" alt="Image">
+                <img src="{% static "images/index.jpg" %}" class="img-responsive margin" style="width:100%" alt="Image">
+
             </div>
 
             <!--Text-->
@@ -27,10 +28,12 @@
                     <br>
                 </div>
 
-                <div class="row" style="text-align: center; height:25%">
-                    <button class="button" id="" onclick="javascript:window.location.href='portfolio'">
+                <div class="row" style="text-align: center; height:25%;">
+                    <button class="sixth" style="outline: none" id="" onclick="javascript:window.location.href='portfolio'">
                         EMBRACE
                     </button>
+                    <br>
+                    <br>
                     <br>
                     <br>
                     <br>

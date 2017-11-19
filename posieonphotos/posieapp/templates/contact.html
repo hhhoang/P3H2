@@ -3,10 +3,10 @@
 
 {% block content %}
 
-<div class="container" style="background-color:white;">
+<div class="main container" style="background-color:white; text-align: center">
     <div class="row">
         <div class="col-sm-6 col-md-6 col-lg-6" style="padding: 0 0 0 0;">
-            <div class="poems" style="text-align: center; padding-top: 20px">
+            <div>
                 <h1>GET IN TOUCH</h1>
                 <p>Hey there! <br>
                     So, here you can contact me <br>
@@ -41,13 +41,13 @@
         </div>-->
         <!--contact form-->
         <div class="col-sm-6 col-md-6 col-lg-6" style="padding: 0 0 0 0;">
-            <div class="poems" style="text-align: center">
-                <h1></h1>
-                <form role="form" action="" method="post">
+            <div>
+                <p></p>
+                <form role="form" action="" method="post" style="outline: none">
                     {% csrf_token %}
                     {{ form.as_p }}
                     <div class="form-actions">
-                    <button class="button" type="submit">SEND MESSAGE</button>
+                    <button class="sixth" style="outline: none" type="submit">SEND MESSAGE</button>
                     </div>
                 </form>
             </div>
