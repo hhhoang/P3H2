@@ -12,6 +12,20 @@ body{
 	margin:0 auto;
 	padding:60px;
 	background: #f8f8f8;
+	font-size: 100%;
+}
+
+@media only screen and (max-width: 400px) {
+body { font-size:0%;}
+}
+
+@media only screen and (max-width: 800px) {
+body { font-size:50%;}
+}
+
+@media only screen and (min-width: 1100px) {
+body { font-size:100%;}
+.wrap {max-width:770px;}
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -19,7 +33,7 @@ h1, h2, h3, h4, h5, h6 {
     font-family: "Montserrat", sans-serif;
     font-weight: 300;
     line-height: 1.5;
-    margin: 0 0 1em 0;
+/*    margin: 0 0 1em 0;*/
     padding-top: 15px;
     padding-bottom: 15px;
     text-transform: uppercase;
@@ -83,6 +97,8 @@ p{
 #container>img{
     max-width: 100%;
     position: absolute;
+    display:block;
+    height: auto;
 }
 
 /* Sliding Buttons*/
@@ -111,6 +127,15 @@ p{
 }
 
 /* Social media icons */
+
+/*.socialmedia{
+    width: 500px;
+    height: 100px;
+    background-color: red;
+    position: relative;
+    bottom: 0;
+
+}*/
 ul {
 	list-style: disc;
 	margin: 0 0 2rem 0;
