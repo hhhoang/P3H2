@@ -25,7 +25,7 @@ SECRET_KEY = '=czb6$tirrukc%$0nndm7yxryhgouce=56rm+@f*-un0zm0kli'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['localhost', '127.0.0.1', 'poetry-hanhhoang.appspot.com']
+ALLOWED_HOSTS = ['localhost', '127.0.0.1', 'poetry-hanhhoang.appspot.com', 'hhhoang.pythonanywhere.com']
 
 
 # Application definition
